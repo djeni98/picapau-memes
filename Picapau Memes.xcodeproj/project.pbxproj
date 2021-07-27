@@ -15,6 +15,7 @@
 		B78A767226B0A3B200B46082 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A767126B0A3B200B46082 /* UIFontExtension.swift */; };
 		B78A767826B0A61300B46082 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A767626B0A61300B46082 /* HomeViewController.swift */; };
 		B78A767926B0A61300B46082 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A767726B0A61300B46082 /* HomeViewController.xib */; };
+		B78A767E26B0A9C700B46082 /* YellowRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A767D26B0A9C700B46082 /* YellowRoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B78A767126B0A3B200B46082 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		B78A767626B0A61300B46082 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B78A767726B0A61300B46082 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B78A767D26B0A9C700B46082 /* YellowRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowRoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		B78A765526B09CBE00B46082 /* Picapau Memes */ = {
 			isa = PBXGroup;
 			children = (
+				B78A767C26B0A9A100B46082 /* Components */,
 				B78A767326B0A5B600B46082 /* Home */,
 				B78A767026B0A36700B46082 /* Extensions */,
 				B78A765626B09CBE00B46082 /* AppDelegate.swift */,
@@ -87,6 +90,14 @@
 				B78A767726B0A61300B46082 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B78A767C26B0A9A100B46082 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B78A767D26B0A9C700B46082 /* YellowRoundedButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B78A767826B0A61300B46082 /* HomeViewController.swift in Sources */,
+				B78A767E26B0A9C700B46082 /* YellowRoundedButton.swift in Sources */,
 				B78A765B26B09CBE00B46082 /* ViewController.swift in Sources */,
 				B78A765726B09CBE00B46082 /* AppDelegate.swift in Sources */,
 				B78A767226B0A3B200B46082 /* UIFontExtension.swift in Sources */,
