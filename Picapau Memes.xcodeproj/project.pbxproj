@@ -16,6 +16,8 @@
 		B78A767826B0A61300B46082 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A767626B0A61300B46082 /* HomeViewController.swift */; };
 		B78A767926B0A61300B46082 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A767726B0A61300B46082 /* HomeViewController.xib */; };
 		B78A767E26B0A9C700B46082 /* YellowRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A767D26B0A9C700B46082 /* YellowRoundedButton.swift */; };
+		B78A768226B0C49900B46082 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A768026B0C49900B46082 /* QuestionViewController.swift */; };
+		B78A768326B0C49900B46082 /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A768126B0C49900B46082 /* QuestionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B78A767626B0A61300B46082 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B78A767726B0A61300B46082 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B78A767D26B0A9C700B46082 /* YellowRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowRoundedButton.swift; sourceTree = "<group>"; };
+		B78A768026B0C49900B46082 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		B78A768126B0C49900B46082 /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			children = (
 				B78A767C26B0A9A100B46082 /* Components */,
 				B78A767326B0A5B600B46082 /* Home */,
+				B78A767F26B0C46B00B46082 /* Question */,
 				B78A767026B0A36700B46082 /* Extensions */,
 				B78A765626B09CBE00B46082 /* AppDelegate.swift */,
 				B78A765826B09CBE00B46082 /* SceneDelegate.swift */,
@@ -98,6 +103,15 @@
 				B78A767D26B0A9C700B46082 /* YellowRoundedButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B78A767F26B0C46B00B46082 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				B78A768026B0C49900B46082 /* QuestionViewController.swift */,
+				B78A768126B0C49900B46082 /* QuestionViewController.xib */,
+			);
+			path = Question;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +173,7 @@
 			files = (
 				B78A766326B09CBF00B46082 /* LaunchScreen.storyboard in Resources */,
 				B78A766026B09CBF00B46082 /* Assets.xcassets in Resources */,
+				B78A768326B0C49900B46082 /* QuestionViewController.xib in Resources */,
 				B78A767926B0A61300B46082 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +187,7 @@
 			files = (
 				B78A767826B0A61300B46082 /* HomeViewController.swift in Sources */,
 				B78A767E26B0A9C700B46082 /* YellowRoundedButton.swift in Sources */,
+				B78A768226B0C49900B46082 /* QuestionViewController.swift in Sources */,
 				B78A765B26B09CBE00B46082 /* ViewController.swift in Sources */,
 				B78A765726B09CBE00B46082 /* AppDelegate.swift in Sources */,
 				B78A767226B0A3B200B46082 /* UIFontExtension.swift in Sources */,

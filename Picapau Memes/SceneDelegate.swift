@@ -21,7 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = HomeViewController() // Your initial view controller.
+
+        let navigationController = UINavigationController(rootViewController: HomeViewController())
+        navigationController.navigationBar.tintColor = UIColor(named: "AppRed")
+        navigationController.navigationBar.barTintColor = UIColor.white
+
+        window.rootViewController = navigationController// Your initial view controller.
         window.makeKeyAndVisible()
         self.window = window
     }

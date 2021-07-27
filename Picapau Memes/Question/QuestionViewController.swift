@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  QuestionViewController.swift
 //  Picapau Memes
 //
 //  Created by Djenifer Renata Pereira on 27/07/21.
@@ -7,23 +7,29 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    @IBOutlet weak var titleLabel: UILabel!
+class QuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
-        titleLabel.font = .rounded(ofSize: 36, weight: .bold)
+        self.navigationItem.setHidesBackButton(true, animated: true);
+
+        let rightButton = UIBarButtonItem(title: "Desistir", style: .plain, target: self, action: #selector(giveUpAction))
+        rightButton.setTitleTextAttributes([
+            NSAttributedString.Key.font : UIFont.rounded(ofSize: 17, weight: .medium)
+        ], for: .normal)
+
+        self.navigationItem.rightBarButtonItem = rightButton
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
-    @IBAction func startQuizAction(_ sender: Any) {
-        self.navigationController?.pushViewController(QuestionViewController(), animated: true)
+    @objc
+    func giveUpAction() {
+        print("Desistir")
     }
 
     /*

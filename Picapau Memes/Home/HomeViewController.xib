@@ -36,6 +36,9 @@
                     <state key="normal" title="Começar Quiz">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="startQuizAction:" destination="-1" eventType="touchUpInside" id="0Ye-Kq-rT7"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLY-LD-jKP">
                     <rect key="frame" x="40" y="120" width="240" height="192"/>
