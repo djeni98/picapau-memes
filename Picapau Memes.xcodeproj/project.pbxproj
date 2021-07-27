@@ -12,6 +12,9 @@
 		B78A765B26B09CBE00B46082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A765A26B09CBE00B46082 /* ViewController.swift */; };
 		B78A766026B09CBF00B46082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78A765F26B09CBF00B46082 /* Assets.xcassets */; };
 		B78A766326B09CBF00B46082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78A766126B09CBF00B46082 /* LaunchScreen.storyboard */; };
+		B78A767226B0A3B200B46082 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A767126B0A3B200B46082 /* UIFontExtension.swift */; };
+		B78A767826B0A61300B46082 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A767626B0A61300B46082 /* HomeViewController.swift */; };
+		B78A767926B0A61300B46082 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A767726B0A61300B46082 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		B78A765F26B09CBF00B46082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B78A766226B09CBF00B46082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B78A766426B09CBF00B46082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B78A767126B0A3B200B46082 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		B78A767626B0A61300B46082 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B78A767726B0A61300B46082 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 		B78A765526B09CBE00B46082 /* Picapau Memes */ = {
 			isa = PBXGroup;
 			children = (
+				B78A767326B0A5B600B46082 /* Home */,
+				B78A767026B0A36700B46082 /* Extensions */,
 				B78A765626B09CBE00B46082 /* AppDelegate.swift */,
 				B78A765826B09CBE00B46082 /* SceneDelegate.swift */,
 				B78A765A26B09CBE00B46082 /* ViewController.swift */,
@@ -62,6 +70,23 @@
 				B78A766426B09CBF00B46082 /* Info.plist */,
 			);
 			path = "Picapau Memes";
+			sourceTree = "<group>";
+		};
+		B78A767026B0A36700B46082 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B78A767126B0A3B200B46082 /* UIFontExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B78A767326B0A5B600B46082 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B78A767626B0A61300B46082 /* HomeViewController.swift */,
+				B78A767726B0A61300B46082 /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +148,7 @@
 			files = (
 				B78A766326B09CBF00B46082 /* LaunchScreen.storyboard in Resources */,
 				B78A766026B09CBF00B46082 /* Assets.xcassets in Resources */,
+				B78A767926B0A61300B46082 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78A767826B0A61300B46082 /* HomeViewController.swift in Sources */,
 				B78A765B26B09CBE00B46082 /* ViewController.swift in Sources */,
 				B78A765726B09CBE00B46082 /* AppDelegate.swift in Sources */,
+				B78A767226B0A3B200B46082 /* UIFontExtension.swift in Sources */,
 				B78A765926B09CBE00B46082 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
