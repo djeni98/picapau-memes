@@ -8,30 +8,35 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
+    @IBOutlet weak var rightBarButton: UIBarButtonItem!
+    @IBOutlet weak var stackView: UIStackView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.setHidesBackButton(true, animated: true);
-
-        let rightButton = UIBarButtonItem(title: "Desistir", style: .plain, target: self, action: #selector(giveUpAction))
-        rightButton.setTitleTextAttributes([
+        rightBarButton?.setTitleTextAttributes([
             NSAttributedString.Key.font : UIFont.rounded(ofSize: 17, weight: .medium)
         ], for: .normal)
 
-        self.navigationItem.rightBarButtonItem = rightButton
+        if let sv = stackView {
+            let screenRect = UIScreen.main.bounds
+
+            let showLastArrangedSubview = screenRect.size.height > 700
+            if showLastArrangedSubview {
+                let lastItem = sv.arrangedSubviews.last
+                lastItem?.isHidden = false
+            }
+        }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    @IBAction func giveUpAction(_ sender: Any) {
+        let _ = self.navigationController?.popViewController(animated: true)
     }
 
-    @objc
-    func giveUpAction() {
-        print("Desistir")
+    @IBAction func yellowButtonAction(_ sender: Any) {
+        let _ = self.navigationController?.popViewController(animated: true)
     }
-
     /*
     // MARK: - Navigation
 

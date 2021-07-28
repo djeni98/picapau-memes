@@ -18,10 +18,6 @@ class HomeViewController: UIViewController {
         titleLabel.font = .rounded(ofSize: 36, weight: .bold)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
     @IBAction func startQuizAction(_ sender: Any) {
         self.navigationController?.pushViewController(QuestionViewController(), animated: true)
     }

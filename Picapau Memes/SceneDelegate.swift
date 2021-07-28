@@ -23,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         let navigationController = UINavigationController(rootViewController: HomeViewController())
+        navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.navigationBar.tintColor = UIColor(named: "AppRed")
         navigationController.navigationBar.barTintColor = UIColor.white
 
