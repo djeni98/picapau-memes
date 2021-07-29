@@ -21,6 +21,7 @@
 		B7C30E1426B2FF9200A7615D /* questionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C30E1326B2FF9200A7615D /* questionsModel.swift */; };
 		B7C30E1826B33A5100A7615D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C30E1626B33A5100A7615D /* ResultViewController.swift */; };
 		B7C30E1926B33A5100A7615D /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C30E1726B33A5100A7615D /* ResultViewController.xib */; };
+		B7C30E1B26B346AB00A7615D /* resultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C30E1A26B346AB00A7615D /* resultModel.swift */; };
 		B7F562AF26B18F5300483147 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F562AE26B18F5300483147 /* CustomUIView.swift */; };
 		B7F562B126B18FBF00483147 /* SelectItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F562B026B18FBF00483147 /* SelectItemView.swift */; };
 		B7F562B326B1948800483147 /* SelectItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F562B226B1948800483147 /* SelectItemView.xib */; };
@@ -43,6 +44,7 @@
 		B7C30E1326B2FF9200A7615D /* questionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionsModel.swift; sourceTree = "<group>"; };
 		B7C30E1626B33A5100A7615D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B7C30E1726B33A5100A7615D /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		B7C30E1A26B346AB00A7615D /* resultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultModel.swift; sourceTree = "<group>"; };
 		B7F562AE26B18F5300483147 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		B7F562B026B18FBF00483147 /* SelectItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectItemView.swift; sourceTree = "<group>"; };
 		B7F562B226B1948800483147 /* SelectItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectItemView.xib; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C30E1326B2FF9200A7615D /* questionsModel.swift */,
+				B7C30E1A26B346AB00A7615D /* resultModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C30E1B26B346AB00A7615D /* resultModel.swift in Sources */,
 				B78A767826B0A61300B46082 /* HomeViewController.swift in Sources */,
 				B7F562AF26B18F5300483147 /* CustomUIView.swift in Sources */,
 				B78A767E26B0A9C700B46082 /* YellowRoundedButton.swift in Sources */,
