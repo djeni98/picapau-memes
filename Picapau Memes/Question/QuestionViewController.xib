@@ -56,23 +56,35 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9uu-VL-qDy">
                     <rect key="frame" x="48.666666666666657" y="422" width="292.66666666666674" height="140"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLH-h7-8LI" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLH-h7-8LI" userLabel="Select Item View 1" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="60"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="AyS-xi-4dc"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="H35-hd-9dT" appends="YES" id="EFV-Gp-rGK"/>
+                            </connections>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjh-qc-7LA" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjh-qc-7LA" userLabel="Select Item View 2" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="80" width="292.66666666666669" height="60"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="yqE-rb-zYQ"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="7vP-Xq-yac" appends="YES" id="o8U-jZ-mvW"/>
+                            </connections>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lh2-5V-avK" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lh2-5V-avK" userLabel="Select Item View 3" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="140" width="292.66666666666669" height="60"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="Weq-J6-WIv"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="02R-Qg-fWf" appends="YES" id="rem-B0-7Vc"/>
+                            </connections>
                         </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -131,6 +143,21 @@
             </variation>
             <point key="canvasLocation" x="253" y="14"/>
         </view>
+        <tapGestureRecognizer id="H35-hd-9dT" userLabel="Tap Gesture Recognizer 1">
+            <connections>
+                <action selector="selectItemTapGestureAction:" destination="-1" id="FLM-RO-vTw"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="7vP-Xq-yac" userLabel="Tap Gesture Recognizer 2">
+            <connections>
+                <action selector="selectItemTapGestureAction:" destination="-1" id="125-e5-dvn"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="02R-Qg-fWf" userLabel="Tap Gesture Recognizer 3">
+            <connections>
+                <action selector="selectItemTapGestureAction:" destination="-1" id="Jip-al-6nT"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="gradient-ry" width="1125" height="666"/>

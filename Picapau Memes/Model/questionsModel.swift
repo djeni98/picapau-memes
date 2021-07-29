@@ -35,7 +35,7 @@ let questionsArrayData = [
     Question(
         imageName: "pipoca",
         options: [
-            "Falou quente na manteiga?",
+            "Você falou em pipoca?",
             "Você disse pipoca amanteigada?",
             "Falou coberta de açucar?"
         ]),

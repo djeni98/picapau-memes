@@ -18,7 +18,9 @@ class QuestionViewController: UIViewController {
 
     @IBOutlet weak var yellowButton: YellowRoundedButton!
 
-    let questionIndex = 0
+    var selectedItem: SelectItemView? = nil
+    var questionIndex = 0
+    var questionsArray = questionsArrayData.shuffled()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +31,14 @@ class QuestionViewController: UIViewController {
         ], for: .normal)
 
         setupStackView()
-        imageView?.backgroundColor = nil
+        hideBackgroundsFromXIB()
 
-        setupQuestionIndex(questionIndex)
+        enableYellowButton(false)
+        setupQuestion(ofIndex: questionIndex)
     }
 
     func setupStackView() {
         if let sv = stackView {
-            sv.backgroundColor = nil
             let screenRect = UIScreen.main.bounds
 
             let showLastArrangedSubview = screenRect.size.height > 700
@@ -47,36 +49,45 @@ class QuestionViewController: UIViewController {
         }
     }
 
-    func setupQuestionIndex(_ index: Int) {
-        if index >= questionsArrayData.count { return }
+    func hideBackgroundsFromXIB() {
+        imageView?.backgroundColor = nil
+        if let sv = stackView { sv.backgroundColor = nil }
+    }
 
-        let question = questionsArrayData[index]
+    func enableYellowButton(_ enabled: Bool) {
+        yellowButton.isEnabled = enabled
+        yellowButton.alpha = enabled ? 1 : 0.7
+    }
+
+    func resetPreviousSelection() {
+        enableYellowButton(false)
+        selectedItem?.toggleSelection()
+        selectedItem = nil
+    }
+
+    func setupQuestion(ofIndex index: Int) {
+        if index >= questionsArray.count { return }
+        let question = questionsArray[index]
 
         imageView?.image = UIImage(named: question.imageName)
-        imageLabel.text = "Imagem \(index + 1) / \(questionsArrayData.count)"
+        imageLabel.text = "Imagem \(index + 1) / \(questionsArray.count)"
 
-        if let sv = stackView {
-            let subviews = sv.arrangedSubviews.filter { $0.isHidden == false }
-            
-            let options = question.getOptionsLimitedByNumber(subviews.count).shuffled()
-            for (i, item) in subviews.enumerated() {
-                guard let selectItemView = item as? SelectItemView else { continue }
+        guard let sv = stackView else { return }
+        let subviews = sv.arrangedSubviews.filter { $0.isHidden == false }
 
-                selectItemView.textLabel.text = options[i]
-            }
+        let options = question.getOptionsLimitedByNumber(subviews.count).shuffled()
+        for (i, item) in subviews.enumerated() {
+            guard let selectItemView = item as? SelectItemView else { continue }
+
+            selectItemView.textLabel.text = options[i]
         }
     }
 
-    func setImageGradientBackground() {
-        let colorTop =  UIColor(named: "AppYellow")!.cgColor.copy(alpha: 0.9)!
-        let colorBottom = UIColor(named: "AppRed")!.cgColor.copy(alpha: 0.8)!
+    func isSelectedItemCorrect(_ selected: SelectItemView) -> Bool {
+        let answer = selected.textLabel.text
+        let correctAnswer = questionsArray[questionIndex].correctAnswer
 
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = imageBackgroundView.bounds
-
-        imageBackgroundView.layer.insertSublayer(gradientLayer, at: 0)
+        return answer == correctAnswer
     }
 
     @IBAction func giveUpAction(_ sender: Any) {
@@ -94,8 +105,36 @@ class QuestionViewController: UIViewController {
     }
 
     @IBAction func yellowButtonAction(_ sender: Any) {
-        let _ = self.navigationController?.popViewController(animated: true)
+        // let _ = self.navigationController?.popViewController(animated: true)
+        guard let si = selectedItem else { return }
+
+        if isSelectedItemCorrect(si) {
+            print("Correto")
+        } else {
+            print("Errado")
+        }
+
+        questionIndex += 1
+        if questionIndex == questionsArray.count { questionIndex = 0 }
+
+        resetPreviousSelection()
+        setupQuestion(ofIndex: questionIndex)
     }
+
+    @IBAction func selectItemTapGestureAction(_ sender: Any) {
+        if let si = selectedItem {
+            si.toggleSelection()
+        }
+
+        guard let gestureSender = sender as? UITapGestureRecognizer else { return }
+        if let si = gestureSender.view as? SelectItemView {
+            si.toggleSelection()
+            selectedItem = si
+
+            enableYellowButton(true)
+        }
+    }
+
     /*
     // MARK: - Navigation
 
