@@ -9,7 +9,14 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     @IBOutlet weak var rightBarButton: UIBarButtonItem!
+
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageBackgroundView: UIView!
+    @IBOutlet weak var imageLabel: UILabel!
+
     @IBOutlet weak var stackView: UIStackView!
+
+    @IBOutlet weak var yellowButton: YellowRoundedButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +26,17 @@ class QuestionViewController: UIViewController {
             NSAttributedString.Key.font : UIFont.rounded(ofSize: 17, weight: .medium)
         ], for: .normal)
 
+        setupStackView()
+
+        imageView?.backgroundColor = nil
+        imageView?.image = UIImage(named: "cada-coisa")
+
+        setImageGradientBackground()
+    }
+
+    func setupStackView() {
         if let sv = stackView {
+            sv.backgroundColor = nil
             let screenRect = UIScreen.main.bounds
 
             let showLastArrangedSubview = screenRect.size.height > 700
@@ -28,6 +45,18 @@ class QuestionViewController: UIViewController {
                 lastItem?.isHidden = false
             }
         }
+    }
+
+    func setImageGradientBackground() {
+        let colorTop =  UIColor(named: "AppYellow")!.cgColor.copy(alpha: 0.9)!
+        let colorBottom = UIColor(named: "AppRed")!.cgColor.copy(alpha: 0.8)!
+
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = imageBackgroundView.bounds
+
+        imageBackgroundView.layer.insertSublayer(gradientLayer, at: 0)
     }
 
     @IBAction func giveUpAction(_ sender: Any) {
