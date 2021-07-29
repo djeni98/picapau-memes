@@ -16,7 +16,7 @@ struct Question {
     func getOptionsLimitedByNumber(_ n: Int) -> [String] {
         if options.count > n {
             let wrongAnswers = options.filter { $0 != correctAnswer }
-            return [correctAnswer] + wrongAnswers[0..<n]
+            return [correctAnswer] + wrongAnswers[0..<n-1]
         } else {
             return options
         }
