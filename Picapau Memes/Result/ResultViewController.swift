@@ -38,7 +38,10 @@ class ResultViewController: UIViewController {
         percentLabel?.font = .rounded(ofSize: 48, weight: .black)
 
         let decimalPercent = Double(percent) / 100
-        let resultArrayIndex = Int(decimalPercent * Double(resultsArrayData.count)) - 1
+
+        var resultArrayIndex = Int(decimalPercent * Double(resultsArrayData.count)) - 1
+        if resultArrayIndex < 0 { resultArrayIndex = 0 }
+
         let result = resultsArrayData[resultArrayIndex]
 
         imageView?.image = UIImage(named: result.imageName)
@@ -54,6 +57,9 @@ class ResultViewController: UIViewController {
         }
     }
 
+    @IBAction func backToHomeAction(_ sender: Any) {
+        let _ = self.navigationController?.popToRootViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation
