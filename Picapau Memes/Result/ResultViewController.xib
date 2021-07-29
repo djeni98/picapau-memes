@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="coloredBackgroundView" destination="paW-Hb-ETE" id="Odk-dV-xis"/>
                 <outlet property="descriptonLabel" destination="eJB-w5-g4q" id="aul-xQ-aH1"/>
+                <outlet property="imageBackgroundView" destination="dLH-rU-wcq" id="Whn-Gb-t3l"/>
                 <outlet property="imageView" destination="yUh-hP-rPk" id="mTl-sA-ALr"/>
                 <outlet property="percentLabel" destination="G8C-7t-xad" id="rOT-vQ-SQ9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -39,6 +40,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paW-Hb-ETE" userLabel="fundo colorido">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-yr" translatesAutoresizingMaskIntoConstraints="NO" id="dLH-rU-wcq" userLabel="fundo">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
+                        </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yUh-hP-rPk">
                             <rect key="frame" x="40" y="105.5" width="240" height="211.5"/>
                         </imageView>
@@ -55,18 +59,21 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                     <constraints>
                         <constraint firstItem="yUh-hP-rPk" firstAttribute="width" secondItem="paW-Hb-ETE" secondAttribute="width" multiplier="0.75" id="31D-nA-Mfy"/>
+                        <constraint firstItem="dLH-rU-wcq" firstAttribute="height" secondItem="paW-Hb-ETE" secondAttribute="height" id="3Za-cT-pvM"/>
                         <constraint firstItem="yUh-hP-rPk" firstAttribute="centerY" secondItem="paW-Hb-ETE" secondAttribute="centerY" multiplier="1.1" id="7jM-76-gnz"/>
                         <constraint firstItem="eJB-w5-g4q" firstAttribute="top" secondItem="yUh-hP-rPk" secondAttribute="bottom" id="Dwj-YJ-yoG"/>
                         <constraint firstItem="eJB-w5-g4q" firstAttribute="centerX" secondItem="paW-Hb-ETE" secondAttribute="centerX" id="I92-w7-mMZ"/>
                         <constraint firstItem="yUh-hP-rPk" firstAttribute="centerX" secondItem="paW-Hb-ETE" secondAttribute="centerX" id="I9M-jd-b0W"/>
+                        <constraint firstItem="dLH-rU-wcq" firstAttribute="centerX" secondItem="paW-Hb-ETE" secondAttribute="centerX" id="IqE-V5-Hat"/>
                         <constraint firstItem="G8C-7t-xad" firstAttribute="centerX" secondItem="paW-Hb-ETE" secondAttribute="centerX" id="OhN-kr-uHn"/>
                         <constraint firstItem="yUh-hP-rPk" firstAttribute="height" secondItem="paW-Hb-ETE" secondAttribute="height" multiplier="0.55" id="Qih-57-eyt"/>
                         <constraint firstAttribute="bottom" secondItem="eJB-w5-g4q" secondAttribute="bottom" id="a4E-D7-Bya"/>
+                        <constraint firstItem="dLH-rU-wcq" firstAttribute="width" secondItem="paW-Hb-ETE" secondAttribute="width" id="bp5-kG-Zon"/>
                         <constraint firstItem="eJB-w5-g4q" firstAttribute="width" secondItem="yUh-hP-rPk" secondAttribute="width" id="d3n-GX-1eL"/>
                         <constraint firstItem="yUh-hP-rPk" firstAttribute="top" secondItem="G8C-7t-xad" secondAttribute="bottom" constant="10" id="jWo-Mc-SNl"/>
+                        <constraint firstItem="dLH-rU-wcq" firstAttribute="centerY" secondItem="paW-Hb-ETE" secondAttribute="centerY" id="oqe-AY-scC"/>
                     </constraints>
                 </view>
             </subviews>
@@ -84,11 +91,9 @@
         </view>
     </objects>
     <resources>
+        <image name="gradient-yr" width="666" height="1125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

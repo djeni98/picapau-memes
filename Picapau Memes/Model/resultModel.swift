@@ -22,7 +22,6 @@ struct Result {
         guard let bg = background else { return nil }
         if bg.count != 2 { return nil }
 
-        print(frame)
         let colorTop = UIColor(named: bg[0].colorName)!.cgColor.copy(alpha: bg[0].alpha)!
         let colorBottom = UIColor(named: bg[1].colorName)!.cgColor.copy(alpha: bg[1].alpha)!
 

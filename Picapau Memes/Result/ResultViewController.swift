@@ -13,6 +13,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var descriptonLabel: UILabel!
 
     @IBOutlet weak var coloredBackgroundView: UIView!
+    @IBOutlet weak var imageBackgroundView: UIImageView!
 
     var resultPercent: Int? = nil
 
@@ -20,15 +21,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        coloredBackgroundView.alpha = 0
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         setupImageAndLabels()
-        UIView.animate(withDuration: 0.2, animations: {
-            self.coloredBackgroundView.alpha = 1
-        })
     }
 
     func setupImageAndLabels() {
@@ -47,14 +40,6 @@ class ResultViewController: UIViewController {
         imageView?.image = UIImage(named: result.imageName)
         descriptonLabel?.text = result.description
         descriptonLabel?.font = .rounded(ofSize: 27, weight: .bold)
-
-        if let gradientLayer = result.getGradientLayer(frame: coloredBackgroundView.bounds) {
-            coloredBackgroundView.backgroundColor = nil
-            coloredBackgroundView.layer.insertSublayer(gradientLayer, at: 0)
-        } else if let background = result.background?.first {
-            let color = UIColor(named: background.colorName)?.withAlphaComponent(background.alpha)
-            coloredBackgroundView.backgroundColor = color
-        }
     }
 
     @IBAction func backToHomeAction(_ sender: Any) {
