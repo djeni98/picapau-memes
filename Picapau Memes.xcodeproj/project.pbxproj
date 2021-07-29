@@ -19,6 +19,8 @@
 		B78A768226B0C49900B46082 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A768026B0C49900B46082 /* QuestionViewController.swift */; };
 		B78A768326B0C49900B46082 /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A768126B0C49900B46082 /* QuestionViewController.xib */; };
 		B7C30E1426B2FF9200A7615D /* questionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C30E1326B2FF9200A7615D /* questionsModel.swift */; };
+		B7C30E1826B33A5100A7615D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C30E1626B33A5100A7615D /* ResultViewController.swift */; };
+		B7C30E1926B33A5100A7615D /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C30E1726B33A5100A7615D /* ResultViewController.xib */; };
 		B7F562AF26B18F5300483147 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F562AE26B18F5300483147 /* CustomUIView.swift */; };
 		B7F562B126B18FBF00483147 /* SelectItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F562B026B18FBF00483147 /* SelectItemView.swift */; };
 		B7F562B326B1948800483147 /* SelectItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F562B226B1948800483147 /* SelectItemView.xib */; };
@@ -39,6 +41,8 @@
 		B78A768026B0C49900B46082 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		B78A768126B0C49900B46082 /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
 		B7C30E1326B2FF9200A7615D /* questionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionsModel.swift; sourceTree = "<group>"; };
+		B7C30E1626B33A5100A7615D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B7C30E1726B33A5100A7615D /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		B7F562AE26B18F5300483147 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		B7F562B026B18FBF00483147 /* SelectItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectItemView.swift; sourceTree = "<group>"; };
 		B7F562B226B1948800483147 /* SelectItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectItemView.xib; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				B78A767C26B0A9A100B46082 /* Components */,
 				B78A767326B0A5B600B46082 /* Home */,
 				B78A767F26B0C46B00B46082 /* Question */,
+				B7C30E1526B33A2C00A7615D /* Result */,
 				B78A767026B0A36700B46082 /* Extensions */,
 				B78A765626B09CBE00B46082 /* AppDelegate.swift */,
 				B78A765826B09CBE00B46082 /* SceneDelegate.swift */,
@@ -131,6 +136,15 @@
 				B7C30E1326B2FF9200A7615D /* questionsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B7C30E1526B33A2C00A7615D /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				B7C30E1626B33A5100A7615D /* ResultViewController.swift */,
+				B7C30E1726B33A5100A7615D /* ResultViewController.xib */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		B7F5629B26B17A4E00483147 /* SelectItem */ = {
@@ -200,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B78A766326B09CBF00B46082 /* LaunchScreen.storyboard in Resources */,
+				B7C30E1926B33A5100A7615D /* ResultViewController.xib in Resources */,
 				B78A766026B09CBF00B46082 /* Assets.xcassets in Resources */,
 				B7F562B326B1948800483147 /* SelectItemView.xib in Resources */,
 				B78A768326B0C49900B46082 /* QuestionViewController.xib in Resources */,
@@ -224,6 +239,7 @@
 				B78A767226B0A3B200B46082 /* UIFontExtension.swift in Sources */,
 				B7F562B126B18FBF00483147 /* SelectItemView.swift in Sources */,
 				B78A765926B09CBE00B46082 /* SceneDelegate.swift in Sources */,
+				B7C30E1826B33A5100A7615D /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

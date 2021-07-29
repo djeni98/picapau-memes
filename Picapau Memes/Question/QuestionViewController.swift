@@ -22,6 +22,8 @@ class QuestionViewController: UIViewController {
     var questionIndex = 0
     var questionsArray = questionsArrayData.shuffled()
 
+    var correctAnswersCount = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -90,6 +92,28 @@ class QuestionViewController: UIViewController {
         return answer == correctAnswer
     }
 
+    func isLastQuestion() -> Bool {
+        return questionIndex == questionsArray.count - 1
+    }
+
+    func setupNextQuestion() {
+        questionIndex += 1
+        resetPreviousSelection()
+        setupQuestion(ofIndex: questionIndex)
+        if isLastQuestion() {
+            yellowButton.setTitle("Terminar", for: .normal)
+        }
+    }
+
+    func navigateToResultView() {
+        let decimalPercent = Double(correctAnswersCount) / Double(questionsArray.count)
+        let integerPercent = Int(decimalPercent * 100)
+
+        let resultViewController = ResultViewController()
+        resultViewController.resultPercent = integerPercent
+        self.navigationController?.pushViewController(resultViewController, animated: true)
+    }
+
     @IBAction func giveUpAction(_ sender: Any) {
         let alert = UIAlertController(title: "Você deseja realmente desistir?", message: nil, preferredStyle: .alert)
         alert.addAction(
@@ -109,16 +133,17 @@ class QuestionViewController: UIViewController {
         guard let si = selectedItem else { return }
 
         if isSelectedItemCorrect(si) {
+            correctAnswersCount += 1
             print("Correto")
         } else {
             print("Errado")
         }
 
-        questionIndex += 1
-        if questionIndex == questionsArray.count { questionIndex = 0 }
-
-        resetPreviousSelection()
-        setupQuestion(ofIndex: questionIndex)
+        if isLastQuestion() {
+            navigateToResultView()
+        } else {
+            setupNextQuestion()
+        }
     }
 
     @IBAction func selectItemTapGestureAction(_ sender: Any) {
