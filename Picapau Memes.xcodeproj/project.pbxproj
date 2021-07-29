@@ -18,6 +18,7 @@
 		B78A767E26B0A9C700B46082 /* YellowRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A767D26B0A9C700B46082 /* YellowRoundedButton.swift */; };
 		B78A768226B0C49900B46082 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A768026B0C49900B46082 /* QuestionViewController.swift */; };
 		B78A768326B0C49900B46082 /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A768126B0C49900B46082 /* QuestionViewController.xib */; };
+		B7C30E1426B2FF9200A7615D /* questionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C30E1326B2FF9200A7615D /* questionsModel.swift */; };
 		B7F562AF26B18F5300483147 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F562AE26B18F5300483147 /* CustomUIView.swift */; };
 		B7F562B126B18FBF00483147 /* SelectItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F562B026B18FBF00483147 /* SelectItemView.swift */; };
 		B7F562B326B1948800483147 /* SelectItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F562B226B1948800483147 /* SelectItemView.xib */; };
@@ -37,6 +38,7 @@
 		B78A767D26B0A9C700B46082 /* YellowRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowRoundedButton.swift; sourceTree = "<group>"; };
 		B78A768026B0C49900B46082 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		B78A768126B0C49900B46082 /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
+		B7C30E1326B2FF9200A7615D /* questionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionsModel.swift; sourceTree = "<group>"; };
 		B7F562AE26B18F5300483147 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		B7F562B026B18FBF00483147 /* SelectItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectItemView.swift; sourceTree = "<group>"; };
 		B7F562B226B1948800483147 /* SelectItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectItemView.xib; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		B78A765526B09CBE00B46082 /* Picapau Memes */ = {
 			isa = PBXGroup;
 			children = (
+				B7C30E1226B2FF7800A7615D /* Model */,
 				B78A767C26B0A9A100B46082 /* Components */,
 				B78A767326B0A5B600B46082 /* Home */,
 				B78A767F26B0C46B00B46082 /* Question */,
@@ -120,6 +123,14 @@
 				B78A768126B0C49900B46082 /* QuestionViewController.xib */,
 			);
 			path = Question;
+			sourceTree = "<group>";
+		};
+		B7C30E1226B2FF7800A7615D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7C30E1326B2FF9200A7615D /* questionsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B7F5629B26B17A4E00483147 /* SelectItem */ = {
@@ -208,6 +219,7 @@
 				B78A767E26B0A9C700B46082 /* YellowRoundedButton.swift in Sources */,
 				B78A768226B0C49900B46082 /* QuestionViewController.swift in Sources */,
 				B78A765B26B09CBE00B46082 /* ViewController.swift in Sources */,
+				B7C30E1426B2FF9200A7615D /* questionsModel.swift in Sources */,
 				B78A765726B09CBE00B46082 /* AppDelegate.swift in Sources */,
 				B78A767226B0A3B200B46082 /* UIFontExtension.swift in Sources */,
 				B7F562B126B18FBF00483147 /* SelectItemView.swift in Sources */,
