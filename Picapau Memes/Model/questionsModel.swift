@@ -11,10 +11,10 @@ struct Question {
     var imageName: String
     var options: [String]
     var correctIndex: Int = 0
+    var correctAnswer: String { options[correctIndex] }
 
     func getOptionsLimitedByNumber(_ n: Int) -> [String] {
         if options.count > n {
-            let correctAnswer = options[correctIndex]
             let wrongAnswers = options.filter { $0 != correctAnswer }
             return [correctAnswer] + wrongAnswers[0..<n]
         } else {

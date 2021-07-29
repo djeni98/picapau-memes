@@ -9,7 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
+            <connections>
+                <outlet property="circleImageView" destination="Mvr-14-HZz" id="FJn-xi-6Tx"/>
+                <outlet property="textLabel" destination="cA0-be-ySf" id="URa-Ac-iu9"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -23,7 +28,7 @@ duas linhas</string>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mvr-14-HZz">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mvr-14-HZz">
                     <rect key="frame" x="374" y="15.5" width="30" height="29"/>
                     <color key="tintColor" name="AppRed"/>
                     <constraints>
@@ -46,7 +51,7 @@ duas linhas</string>
         </view>
     </objects>
     <resources>
-        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <namedColor name="AppRed">
             <color red="0.82352941176470584" green="0.26666666666666666" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "cada-coisa.png",
+      "filename" : "gradient-ry.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "cada-coisa@2x.png",
+      "filename" : "gradient-ry@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "cada-coisa@3x.png",
+      "filename" : "gradient-ry@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

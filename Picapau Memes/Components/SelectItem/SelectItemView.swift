@@ -16,6 +16,7 @@ class SelectItemView: CustomUIView {
         // Drawing code
     }
     */
+    @IBOutlet weak var textLabel: UILabel!
 
     @IBOutlet weak var circleImageView: UIImageView!
     var selected = false

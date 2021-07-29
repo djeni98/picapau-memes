@@ -18,6 +18,8 @@ class QuestionViewController: UIViewController {
 
     @IBOutlet weak var yellowButton: YellowRoundedButton!
 
+    let questionIndex = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,11 +29,9 @@ class QuestionViewController: UIViewController {
         ], for: .normal)
 
         setupStackView()
-
         imageView?.backgroundColor = nil
-        imageView?.image = UIImage(named: "cada-coisa")
 
-        setImageGradientBackground()
+        setupQuestionIndex(questionIndex)
     }
 
     func setupStackView() {
@@ -43,6 +43,26 @@ class QuestionViewController: UIViewController {
             if showLastArrangedSubview {
                 let lastItem = sv.arrangedSubviews.last
                 lastItem?.isHidden = false
+            }
+        }
+    }
+
+    func setupQuestionIndex(_ index: Int) {
+        if index >= questionsArrayData.count { return }
+
+        let question = questionsArrayData[index]
+
+        imageView?.image = UIImage(named: question.imageName)
+        imageLabel.text = "Imagem \(index + 1) / \(questionsArrayData.count)"
+
+        if let sv = stackView {
+            let subviews = sv.arrangedSubviews.filter { $0.isHidden == false }
+            
+            let options = question.getOptionsLimitedByNumber(subviews.count).shuffled()
+            for (i, item) in subviews.enumerated() {
+                guard let selectItemView = item as? SelectItemView else { continue }
+
+                selectItemView.textLabel.text = options[i]
             }
         }
     }
