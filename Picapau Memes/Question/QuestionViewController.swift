@@ -31,7 +31,17 @@ class QuestionViewController: UIViewController {
     }
 
     @IBAction func giveUpAction(_ sender: Any) {
-        let _ = self.navigationController?.popViewController(animated: true)
+        let alert = UIAlertController(title: "Você deseja realmente desistir?", message: nil, preferredStyle: .alert)
+        alert.addAction(
+            UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        )
+        alert.addAction(
+            UIAlertAction(title: "Desistir", style: .destructive, handler: { _ in
+                self.navigationController?.popViewController(animated: true)
+            })
+        )
+
+        self.present(alert, animated: true, completion: nil)
     }
 
     @IBAction func yellowButtonAction(_ sender: Any) {
