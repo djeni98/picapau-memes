@@ -32,8 +32,7 @@ class ResultViewController: UIViewController {
 
         let decimalPercent = Double(percent) / 100
 
-        var resultArrayIndex = Int(decimalPercent * Double(resultsArrayData.count)) - 1
-        if resultArrayIndex < 0 { resultArrayIndex = 0 }
+        var resultArrayIndex = Int((decimalPercent * Double(resultsArrayData.count - 1)).rounded())
 
         let result = resultsArrayData[resultArrayIndex]
 

@@ -39,4 +39,44 @@ let questionsArrayData = [
             "Você disse pipoca amanteigada?",
             "Falou coberta de açucar?"
         ]),
+    Question(
+        imageName: "policia",
+        options: [
+            "Se o pica pau tivesse comunicado a polícia",
+            "Seria melhor comunicar a polícia",
+            "Se o ele tivesse avisado a polícia"
+        ]
+    ),
+    Question(
+        imageName: "vamos-nos",
+        options: [
+            "E lá vamos nós",
+            "Asas batendo, marcha de decolagem",
+            "Esta também não é"
+        ]
+    ),
+    Question(
+        imageName: "conozco",
+        options: [
+            "Yo no lo conozco, señor",
+            "Eu não o conheço, senhor",
+            "Yo no se, senõr"
+        ]
+    ),
+    Question(
+        imageName: "vigarice",
+        options: [
+            "Essa vai ser minha melhor vigarice",
+            "Essa vai ser minha melhor trapaça",
+            "A maior vigarice de todas"
+        ]
+    ),
+    Question(
+        imageName: "inferno",
+        options: [
+            "Vá pro inferno",
+            "Vá pra raio que o parta",
+            "Vai se lascar"
+        ]
+    ),
 ]

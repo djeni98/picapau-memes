@@ -54,10 +54,10 @@
                     </items>
                 </navigationBar>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9uu-VL-qDy">
-                    <rect key="frame" x="48.666666666666657" y="422" width="292.66666666666674" height="140"/>
+                    <rect key="frame" x="39" y="422" width="312" height="140"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLH-h7-8LI" userLabel="Select Item View 1" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="312" height="60"/>
                             <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="AyS-xi-4dc"/>
@@ -67,7 +67,7 @@
                             </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjh-qc-7LA" userLabel="Select Item View 2" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="80" width="292.66666666666669" height="60"/>
+                            <rect key="frame" x="0.0" y="80" width="312" height="60"/>
                             <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="yqE-rb-zYQ"/>
@@ -77,7 +77,7 @@
                             </connections>
                         </view>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lh2-5V-avK" userLabel="Select Item View 3" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="140" width="292.66666666666669" height="60"/>
+                            <rect key="frame" x="0.0" y="140" width="312" height="60"/>
                             <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="Weq-J6-WIv"/>
@@ -103,7 +103,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagem 1 / X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o73-C4-Z1E">
-                    <rect key="frame" x="48.666666666666657" y="346.33333333333331" width="292.66666666666674" height="13.333333333333314"/>
+                    <rect key="frame" x="39" y="346.33333333333331" width="312" height="13.333333333333314"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -132,9 +132,9 @@
                 <constraint firstItem="9uu-VL-qDy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r3c-Gm-IEA"/>
                 <constraint firstItem="2kN-iQ-L9u" firstAttribute="top" secondItem="MSp-WF-yyx" secondAttribute="bottom" id="sf0-nu-wXf"/>
                 <constraint firstItem="MSp-WF-yyx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wFT-mR-l7D"/>
-                <constraint firstItem="o73-C4-Z1E" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="yFD-ij-ArS"/>
+                <constraint firstItem="o73-C4-Z1E" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="yFD-ij-ArS"/>
                 <constraint firstItem="w77-bG-phq" firstAttribute="height" secondItem="2kN-iQ-L9u" secondAttribute="height" id="yL7-cT-en2"/>
-                <constraint firstItem="9uu-VL-qDy" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="yog-vb-xIP"/>
+                <constraint firstItem="9uu-VL-qDy" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="yog-vb-xIP"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">

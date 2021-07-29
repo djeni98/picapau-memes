@@ -20,20 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA0-be-ySf">
-                    <rect key="frame" x="10" y="9.5" width="344" height="41"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA0-be-ySf">
+                    <rect key="frame" x="10" y="11" width="359" height="38.5"/>
                     <string key="text">Label com
 duas linhas</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mvr-14-HZz">
-                    <rect key="frame" x="374" y="15.5" width="30" height="29"/>
+                    <rect key="frame" x="379" y="18" width="25" height="24"/>
                     <color key="tintColor" name="AppRed"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="Isa-6n-Mvq"/>
-                        <constraint firstAttribute="width" constant="30" id="Rtm-UV-8ud"/>
+                        <constraint firstAttribute="height" constant="25" id="Isa-6n-Mvq"/>
+                        <constraint firstAttribute="width" constant="25" id="Rtm-UV-8ud"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -42,7 +42,7 @@ duas linhas</string>
             <constraints>
                 <constraint firstItem="Mvr-14-HZz" firstAttribute="centerY" secondItem="cA0-be-ySf" secondAttribute="centerY" id="6YC-Jd-igO"/>
                 <constraint firstItem="cA0-be-ySf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6qy-hB-WwA"/>
-                <constraint firstItem="Mvr-14-HZz" firstAttribute="leading" secondItem="cA0-be-ySf" secondAttribute="trailing" constant="20" id="h8m-7K-SFd"/>
+                <constraint firstItem="Mvr-14-HZz" firstAttribute="leading" secondItem="cA0-be-ySf" secondAttribute="trailing" constant="10" id="h8m-7K-SFd"/>
                 <constraint firstAttribute="trailing" secondItem="Mvr-14-HZz" secondAttribute="trailing" constant="10" id="iYW-cK-05R"/>
                 <constraint firstItem="cA0-be-ySf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="zHv-zf-3sg"/>
             </constraints>
