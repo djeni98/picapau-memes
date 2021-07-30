@@ -22,8 +22,20 @@ class SelectItemView: CustomUIView {
     var selected = false
     func toggleSelection() {
         selected.toggle()
-        let imageName = selected ? "checkmark.circle.fill" : "circle"
-        circleImageView.image = UIImage(systemName: imageName)
+        let imageName = selected ? "largecircle.fill.circle" : "circle"
+        if selected {
+            UIView.animate(
+                withDuration: 0.3,
+                delay: 0,
+                options: .curveEaseInOut,
+                animations: {
+                    self.circleImageView.alpha = 0
+                    self.circleImageView.image = UIImage(systemName: imageName)
+                    self.circleImageView.alpha = 1
+            })
+        } else {
+            self.circleImageView.image = UIImage(systemName: imageName)
+        }
     }
 
     override func customizeView() {
