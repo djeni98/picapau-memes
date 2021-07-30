@@ -82,9 +82,9 @@
 			children = (
 				B7C30E1226B2FF7800A7615D /* Model */,
 				B78A767C26B0A9A100B46082 /* Components */,
-				B78A767326B0A5B600B46082 /* Home */,
-				B78A767F26B0C46B00B46082 /* Question */,
-				B7C30E1526B33A2C00A7615D /* Result */,
+				B78A767326B0A5B600B46082 /* HomeViewController */,
+				B78A767F26B0C46B00B46082 /* QuestionViewController */,
+				B7C30E1526B33A2C00A7615D /* ResultViewController */,
 				B78A767026B0A36700B46082 /* Extensions */,
 				B78A765626B09CBE00B46082 /* AppDelegate.swift */,
 				B78A765826B09CBE00B46082 /* SceneDelegate.swift */,
@@ -104,13 +104,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B78A767326B0A5B600B46082 /* Home */ = {
+		B78A767326B0A5B600B46082 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
 				B78A767626B0A61300B46082 /* HomeViewController.swift */,
 				B78A767726B0A61300B46082 /* HomeViewController.xib */,
 			);
-			path = Home;
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 		B78A767C26B0A9A100B46082 /* Components */ = {
@@ -123,13 +123,13 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		B78A767F26B0C46B00B46082 /* Question */ = {
+		B78A767F26B0C46B00B46082 /* QuestionViewController */ = {
 			isa = PBXGroup;
 			children = (
 				B78A768026B0C49900B46082 /* QuestionViewController.swift */,
 				B78A768126B0C49900B46082 /* QuestionViewController.xib */,
 			);
-			path = Question;
+			path = QuestionViewController;
 			sourceTree = "<group>";
 		};
 		B7C30E1226B2FF7800A7615D /* Model */ = {
@@ -141,13 +141,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B7C30E1526B33A2C00A7615D /* Result */ = {
+		B7C30E1526B33A2C00A7615D /* ResultViewController */ = {
 			isa = PBXGroup;
 			children = (
 				B7C30E1626B33A5100A7615D /* ResultViewController.swift */,
 				B7C30E1726B33A5100A7615D /* ResultViewController.xib */,
 			);
-			path = Result;
+			path = ResultViewController;
 			sourceTree = "<group>";
 		};
 		B7F5629B26B17A4E00483147 /* SelectItem */ = {
