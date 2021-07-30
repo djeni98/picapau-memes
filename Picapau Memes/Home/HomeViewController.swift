@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageBackgroundImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +17,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
         titleLabel.font = .rounded(ofSize: 36, weight: .bold)
+        imageBackgroundImageView?.layer.cornerRadius = 10
     }
 
     @IBAction func startQuizAction(_ sender: Any) {

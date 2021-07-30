@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -11,23 +11,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Picapau_Memes" customModuleProvider="target">
             <connections>
+                <outlet property="imageBackgroundImageView" destination="zCR-NC-kwq" id="Unz-c9-n39"/>
                 <outlet property="titleLabel" destination="DBg-Gw-dAJ" id="Tex-je-DHf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picapau Memes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBg-Gw-dAJ">
-                    <rect key="frame" x="27.5" y="50.5" width="265" height="43"/>
+                    <rect key="frame" x="81.666666666666686" y="117.33333333333331" width="265" height="43"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                     <color key="textColor" name="AppRed"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCq-uC-gfq" customClass="YellowRoundedButton" customModule="Picapau_Memes" customModuleProvider="target">
-                    <rect key="frame" x="49.5" y="402" width="221" height="60"/>
+                    <rect key="frame" x="103.66666666666669" y="803.33333333333337" width="221" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="hwy-BN-2aZ"/>
                     </constraints>
@@ -40,28 +41,35 @@
                         <action selector="startQuizAction:" destination="-1" eventType="touchUpInside" id="0Ye-Kq-rT7"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLY-LD-jKP">
-                    <rect key="frame" x="40" y="120" width="240" height="192"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-yr" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-NC-kwq">
+                    <rect key="frame" x="53.666666666666657" y="231.66666666666666" width="321" height="370.33333333333337"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veja se você lembra das frases icônicas de Pica pau" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0K-AJ-8c3">
-                    <rect key="frame" x="40" y="327.5" width="240" height="41"/>
+                    <rect key="frame" x="53.666666666666657" y="651" width="321" height="40.666666666666629"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pica-pau-simples" translatesAutoresizingMaskIntoConstraints="NO" id="SLY-LD-jKP">
+                    <rect key="frame" x="53.666666666666657" y="231.66666666666666" width="321" height="370.33333333333337"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="SLY-LD-jKP" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="23k-0w-ldu"/>
+                <constraint firstItem="zCR-NC-kwq" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="6Zz-AK-HKr"/>
                 <constraint firstItem="KCq-uC-gfq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="EaX-VK-eO3"/>
+                <constraint firstItem="zCR-NC-kwq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="FOr-Mb-evK"/>
                 <constraint firstItem="DBg-Gw-dAJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TJB-Xz-CC2"/>
                 <constraint firstItem="SLY-LD-jKP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.9" id="a0q-6B-WRW"/>
+                <constraint firstItem="J0K-AJ-8c3" firstAttribute="centerX" secondItem="SLY-LD-jKP" secondAttribute="centerX" id="aW9-GU-UAB"/>
                 <constraint firstItem="SLY-LD-jKP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="coD-Hg-dEo"/>
+                <constraint firstItem="zCR-NC-kwq" firstAttribute="centerX" secondItem="SLY-LD-jKP" secondAttribute="centerX" id="d7Q-VU-10t"/>
                 <constraint firstItem="J0K-AJ-8c3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g1g-Oj-iQ8"/>
                 <constraint firstItem="J0K-AJ-8c3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="gQ5-wK-Jsj"/>
                 <constraint firstItem="KCq-uC-gfq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.8" id="gdS-OR-zu7"/>
+                <constraint firstItem="zCR-NC-kwq" firstAttribute="centerY" secondItem="SLY-LD-jKP" secondAttribute="centerY" id="hww-Mi-aX7"/>
                 <constraint firstItem="SLY-LD-jKP" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="j5D-Ks-MYS"/>
                 <constraint firstItem="J0K-AJ-8c3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.45" id="sbZ-MN-eMO"/>
                 <constraint firstItem="DBg-Gw-dAJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.3" id="tmV-fU-3lZ"/>
@@ -70,6 +78,8 @@
         </view>
     </objects>
     <resources>
+        <image name="gradient-yr" width="666" height="1125"/>
+        <image name="pica-pau-simples" width="666" height="825"/>
         <namedColor name="AppRed">
             <color red="0.82352941176470584" green="0.26666666666666666" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
