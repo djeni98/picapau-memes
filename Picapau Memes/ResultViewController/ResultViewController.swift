@@ -11,8 +11,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptonLabel: UILabel!
+    @IBOutlet weak var yellowButton: YellowRoundedButton!
 
-    @IBOutlet weak var coloredBackgroundView: UIView!
     @IBOutlet weak var imageBackgroundView: UIImageView!
 
     var resultPercent: Int? = nil
@@ -24,6 +24,27 @@ class ResultViewController: UIViewController {
         setupImageAndLabels()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        UIView.animate(withDuration: 0.7) {
+            self.hideImageAndLabels(false)
+            self.hideAndDisableYellowButton(false)
+        }
+    }
+
+    func hideImageAndLabels(_ hide: Bool) {
+        let alpha: CGFloat = hide ? 0 : 1
+        percentLabel?.alpha = alpha
+        imageView?.alpha = alpha
+        descriptonLabel?.alpha = alpha
+    }
+
+    func hideAndDisableYellowButton(_ hide: Bool) {
+        yellowButton?.alpha = hide ? 0.1 : 1
+        yellowButton?.isEnabled = !hide
+    }
+
     func setupImageAndLabels() {
         guard let percent = resultPercent else { return }
 
@@ -32,13 +53,16 @@ class ResultViewController: UIViewController {
 
         let decimalPercent = Double(percent) / 100
 
-        var resultArrayIndex = Int((decimalPercent * Double(resultsArrayData.count - 1)).rounded())
+        let resultArrayIndex = Int((decimalPercent * Double(resultsArrayData.count - 1)).rounded())
 
         let result = resultsArrayData[resultArrayIndex]
 
         imageView?.image = UIImage(named: result.imageName)
         descriptonLabel?.text = result.description
         descriptonLabel?.font = .rounded(ofSize: 27, weight: .bold)
+
+        hideImageAndLabels(true)
+        hideAndDisableYellowButton(true)
     }
 
     @IBAction func backToHomeAction(_ sender: Any) {
