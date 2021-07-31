@@ -45,6 +45,16 @@ class QuestionViewController: UIViewController {
 
         enableYellowButton(false)
         setupQuestion(ofIndex: questionIndex)
+        hideImageOptionsAndButton(true)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIView.animate(withDuration: 0.5, animations: { [self] in
+            self.imageView.alpha = 1
+            self.stackView.alpha = 1
+            self.yellowButton.alpha = 0.7
+        })
     }
 
     func setupStackView() {
@@ -130,11 +140,11 @@ class QuestionViewController: UIViewController {
             resetPreviousSelection()
             setupQuestion(ofIndex: questionIndex)
 
-            enableYellowButton(false)
             yellowButtonState = .answer
-            changeYellowButtonTitle(to: "Responder")
+            yellowButton.setTitle("Responder", for: .normal)
 
             hideImageOptionsAndButton(false)
+            enableYellowButton(false)
         })
     }
 
