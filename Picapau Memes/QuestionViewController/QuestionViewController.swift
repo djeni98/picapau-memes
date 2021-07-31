@@ -115,14 +115,27 @@ class QuestionViewController: UIViewController {
         return questionIndex == questionsArray.count - 1
     }
 
-    func setupNextQuestion() {
-        questionIndex += 1
-        resetPreviousSelection()
-        setupQuestion(ofIndex: questionIndex)
+    func hideImageOptionsAndButton(_ hide: Bool) {
+        let alpha: CGFloat = hide ? 0 : 1
+        self.imageView.alpha = alpha
+        self.stackView.alpha = alpha
+        self.yellowButton.alpha = alpha
+    }
 
-        enableYellowButton(false)
-        yellowButtonState = .answer
-        changeYellowButtonTitle(to: "Responder")
+    func setupNextQuestion() {
+        UIView.animate(withDuration: 0.3, animations: { [self] in
+            hideImageOptionsAndButton(true)
+
+            questionIndex += 1
+            resetPreviousSelection()
+            setupQuestion(ofIndex: questionIndex)
+
+            enableYellowButton(false)
+            yellowButtonState = .answer
+            changeYellowButtonTitle(to: "Responder")
+
+            hideImageOptionsAndButton(false)
+        })
     }
 
     func navigateToResultView() {
