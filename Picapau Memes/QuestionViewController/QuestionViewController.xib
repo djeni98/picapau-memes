@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -22,11 +22,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTE-Bq-VkS" customClass="YellowRoundedButton" customModule="Picapau_Memes" customModuleProvider="target">
-                    <rect key="frame" x="113" y="729.66666666666663" width="164" height="60"/>
+                    <rect key="frame" x="78" y="402" width="164" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="rwq-tr-lgy"/>
                     </constraints>
@@ -40,7 +40,7 @@
                     </connections>
                 </button>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSp-WF-yyx">
-                    <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <color key="tintColor" name="AppRed"/>
                     <color key="barTintColor" systemColor="systemBackgroundColor"/>
                     <items>
@@ -54,33 +54,33 @@
                     </items>
                 </navigationBar>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9uu-VL-qDy">
-                    <rect key="frame" x="39" y="422" width="312" height="140"/>
+                    <rect key="frame" x="32" y="240" width="256" height="110"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLH-h7-8LI" userLabel="Select Item View 1" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="312" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="256" height="45"/>
                             <gestureRecognizers/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="AyS-xi-4dc"/>
+                                <constraint firstAttribute="height" constant="45" id="AyS-xi-4dc"/>
                             </constraints>
                             <connections>
                                 <outletCollection property="gestureRecognizers" destination="H35-hd-9dT" appends="YES" id="EFV-Gp-rGK"/>
                             </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjh-qc-7LA" userLabel="Select Item View 2" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="80" width="312" height="60"/>
+                            <rect key="frame" x="0.0" y="65" width="256" height="45"/>
                             <gestureRecognizers/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="yqE-rb-zYQ"/>
+                                <constraint firstAttribute="height" constant="45" id="yqE-rb-zYQ"/>
                             </constraints>
                             <connections>
                                 <outletCollection property="gestureRecognizers" destination="7vP-Xq-yac" appends="YES" id="o8U-jZ-mvW"/>
                             </connections>
                         </view>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lh2-5V-avK" userLabel="Select Item View 3" customClass="SelectItemView" customModule="Picapau_Memes" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="140" width="312" height="60"/>
+                            <rect key="frame" x="0.0" y="110" width="256" height="45"/>
                             <gestureRecognizers/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="Weq-J6-WIv"/>
+                                <constraint firstAttribute="height" constant="45" id="Weq-J6-WIv"/>
                             </constraints>
                             <connections>
                                 <outletCollection property="gestureRecognizers" destination="02R-Qg-fWf" appends="YES" id="rem-B0-7Vc"/>
@@ -90,12 +90,12 @@
                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-ry" translatesAutoresizingMaskIntoConstraints="NO" id="w77-bG-phq">
-                    <rect key="frame" x="0.0" y="88.000000000000014" width="390" height="253.33333333333337"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="144"/>
                     <color key="backgroundColor" name="AppYellow"/>
                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2kN-iQ-L9u">
-                    <rect key="frame" x="0.0" y="88.000000000000014" width="390" height="253.33333333333337"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="144"/>
                     <color key="backgroundColor" systemColor="separatorColor"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6c-NJ-b9X" userLabel="Image Background">
@@ -103,7 +103,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagem 1 / X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o73-C4-Z1E">
-                    <rect key="frame" x="39" y="346.33333333333331" width="312" height="13.333333333333314"/>
+                    <rect key="frame" x="32" y="193" width="256" height="13.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
