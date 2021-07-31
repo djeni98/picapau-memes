@@ -23,8 +23,17 @@ class SelectItemView: CustomUIView {
     var selected = false
 
     let animationDuration = 0.3
-    let alphaZero = UIColor.systemGray3.cgColor.copy(alpha: 0)
-    let alphaOne = UIColor.systemGray3.cgColor
+    let defaultColor = UIColor.systemGray3
+    var alphaZero: CGColor? { defaultColor.cgColor.copy(alpha: 0) }
+    var alphaOne: CGColor? { defaultColor.cgColor }
+
+    func resetSelection() {
+        selected = false
+        self.circleImageView.image = UIImage(systemName: "circle")
+        self.circleImageView.tintColor = defaultColor
+        self.view.layer.borderColor = alphaZero
+    }
+
     func toggleSelection() {
         selected.toggle()
         let imageName = selected ? "largecircle.fill.circle" : "circle"
@@ -64,5 +73,27 @@ class SelectItemView: CustomUIView {
         self.view.layer.cornerRadius = 10
         self.view.layer.borderWidth = 2
         self.view.layer.borderColor = alphaZero
+    }
+
+    func customizeStyle(color: UIColor?, imageName: String) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.circleImageView.alpha = 0
+
+            self.circleImageView.image = UIImage(systemName: imageName)
+            self.circleImageView.tintColor = color
+
+            self.circleImageView.alpha = 1
+        })
+
+        self.view.layer.borderColor = alphaZero
+        animateViewBorder(withDelay: 0.3, fromColor: alphaZero, toColor: color?.cgColor)
+    }
+
+    func customizeToCorrect() {
+        customizeStyle(color: UIColor(named: "AppBlue"), imageName: "checkmark.circle.fill")
+    }
+
+    func customizeToWrong() {
+        customizeStyle(color: UIColor(named: "AppRed"), imageName: "xmark.circle.fill")
     }
 }

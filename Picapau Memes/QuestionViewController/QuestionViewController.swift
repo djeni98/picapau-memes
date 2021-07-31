@@ -18,7 +18,15 @@ class QuestionViewController: UIViewController {
 
     @IBOutlet weak var yellowButton: YellowRoundedButton!
 
+    enum YellowButtonState {
+        case answer
+        case next
+    }
+    var yellowButtonState: YellowButtonState = .answer
+
     var selectedItem: SelectItemView? = nil
+    var correctItem: SelectItemView? = nil
+
     var questionIndex = 0
     var questionsArray = questionsArrayData.shuffled()
 
@@ -61,10 +69,20 @@ class QuestionViewController: UIViewController {
         yellowButton.alpha = enabled ? 1 : 0.7
     }
 
+    func changeYellowButtonTitle(to title: String) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.yellowButton.alpha = 0
+            self.yellowButton.setTitle(title, for: .normal)
+            self.yellowButton.alpha = 1
+        })
+    }
+
     func resetPreviousSelection() {
-        enableYellowButton(false)
-        selectedItem?.toggleSelection()
+        correctItem?.resetSelection()
+        selectedItem?.resetSelection()
+
         selectedItem = nil
+        correctItem = nil
     }
 
     func setupQuestion(ofIndex index: Int) {
@@ -82,6 +100,7 @@ class QuestionViewController: UIViewController {
             guard let selectItemView = item as? SelectItemView else { continue }
 
             selectItemView.textLabel.text = options[i]
+            if options[i] == question.correctAnswer { correctItem = selectItemView }
         }
     }
 
@@ -100,9 +119,10 @@ class QuestionViewController: UIViewController {
         questionIndex += 1
         resetPreviousSelection()
         setupQuestion(ofIndex: questionIndex)
-        if isLastQuestion() {
-            yellowButton.setTitle("Terminar", for: .normal)
-        }
+
+        enableYellowButton(false)
+        yellowButtonState = .answer
+        changeYellowButtonTitle(to: "Responder")
     }
 
     func navigateToResultView() {
@@ -112,6 +132,28 @@ class QuestionViewController: UIViewController {
         let resultViewController = ResultViewController()
         resultViewController.resultPercent = integerPercent
         self.navigationController?.pushViewController(resultViewController, animated: true)
+    }
+
+    func checkAnswer(with si: SelectItemView) {
+        correctItem?.customizeToCorrect()
+
+        if isSelectedItemCorrect(si) {
+            correctAnswersCount += 1
+            si.customizeToCorrect()
+        } else {
+            si.customizeToWrong()
+        }
+
+        changeYellowButtonTitle(to: isLastQuestion() ? "Terminar" : "Próximo")
+        yellowButtonState = .next
+    }
+
+    func setupNextPage() {
+        if isLastQuestion() {
+            navigateToResultView()
+        } else {
+            setupNextQuestion()
+        }
     }
 
     @IBAction func giveUpAction(_ sender: Any) {
@@ -130,23 +172,18 @@ class QuestionViewController: UIViewController {
 
     @IBAction func yellowButtonAction(_ sender: Any) {
         // let _ = self.navigationController?.popViewController(animated: true)
-        guard let si = selectedItem else { return }
-
-        if isSelectedItemCorrect(si) {
-            correctAnswersCount += 1
-            print("Correto")
-        } else {
-            print("Errado")
-        }
-
-        if isLastQuestion() {
-            navigateToResultView()
-        } else {
-            setupNextQuestion()
+        switch yellowButtonState {
+        case .answer:
+            guard let si = selectedItem else { return }
+            checkAnswer(with: si)
+        case .next:
+            setupNextPage()
         }
     }
 
     @IBAction func selectItemTapGestureAction(_ sender: Any) {
+        if yellowButtonState == .next { return }
+
         if let si = selectedItem {
             si.toggleSelection()
         }
