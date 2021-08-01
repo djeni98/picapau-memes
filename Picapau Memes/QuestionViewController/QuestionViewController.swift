@@ -133,6 +133,7 @@ class QuestionViewController: UIViewController {
     }
 
     func setupNextQuestion() {
+        SFXPlayer.shared.stopMusic()
         UIView.animate(withDuration: 0.3, animations: { [self] in
             hideImageOptionsAndButton(true)
 
@@ -167,6 +168,8 @@ class QuestionViewController: UIViewController {
             si.customizeToWrong()
         }
 
+        let question = questionsArray[questionIndex]
+        SFXPlayer.shared.playMusic(music: question.music)
         changeYellowButtonTitle(to: isLastQuestion() ? "Terminar" : "Próximo")
         yellowButtonState = .next
     }

@@ -22,6 +22,17 @@
 		B7C30E1826B33A5100A7615D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C30E1626B33A5100A7615D /* ResultViewController.swift */; };
 		B7C30E1926B33A5100A7615D /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C30E1726B33A5100A7615D /* ResultViewController.xib */; };
 		B7C30E1B26B346AB00A7615D /* resultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C30E1A26B346AB00A7615D /* resultModel.swift */; };
+		B7D5B82426B6DC8D004F6DE0 /* SFXPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5B82326B6DC8D004F6DE0 /* SFXPlayer.swift */; };
+		B7D5B82626B6DCE4004F6DE0 /* musicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5B82526B6DCE4004F6DE0 /* musicModel.swift */; };
+		B7D5B83A26B6E35A004F6DE0 /* inferno.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7D5B83126B6E35A004F6DE0 /* inferno.mp3 */; };
+		B7D5B83B26B6E35A004F6DE0 /* policia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7D5B83226B6E35A004F6DE0 /* policia.mp3 */; };
+		B7D5B83C26B6E35A004F6DE0 /* aeee.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7D5B83326B6E35A004F6DE0 /* aeee.mp3 */; };
+		B7D5B83D26B6E35A004F6DE0 /* pipoca.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7D5B83426B6E35A004F6DE0 /* pipoca.mp3 */; };
+		B7D5B83E26B6E35A004F6DE0 /* conozco.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7D5B83526B6E35A004F6DE0 /* conozco.mp3 */; };
+		B7D5B83F26B6E35A004F6DE0 /* triste-nao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7D5B83626B6E35A004F6DE0 /* triste-nao.mp3 */; };
+		B7D5B84026B6E35A004F6DE0 /* vigarice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7D5B83726B6E35A004F6DE0 /* vigarice.mp3 */; };
+		B7D5B84126B6E35A004F6DE0 /* vamos-nos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7D5B83826B6E35A004F6DE0 /* vamos-nos.mp3 */; };
+		B7D5B84226B6E35A004F6DE0 /* cada-coisa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7D5B83926B6E35A004F6DE0 /* cada-coisa.mp3 */; };
 		B7F562AF26B18F5300483147 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F562AE26B18F5300483147 /* CustomUIView.swift */; };
 		B7F562B126B18FBF00483147 /* SelectItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F562B026B18FBF00483147 /* SelectItemView.swift */; };
 		B7F562B326B1948800483147 /* SelectItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F562B226B1948800483147 /* SelectItemView.xib */; };
@@ -45,6 +56,17 @@
 		B7C30E1626B33A5100A7615D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B7C30E1726B33A5100A7615D /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		B7C30E1A26B346AB00A7615D /* resultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultModel.swift; sourceTree = "<group>"; };
+		B7D5B82326B6DC8D004F6DE0 /* SFXPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFXPlayer.swift; sourceTree = "<group>"; };
+		B7D5B82526B6DCE4004F6DE0 /* musicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicModel.swift; sourceTree = "<group>"; };
+		B7D5B83126B6E35A004F6DE0 /* inferno.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = inferno.mp3; sourceTree = "<group>"; };
+		B7D5B83226B6E35A004F6DE0 /* policia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = policia.mp3; sourceTree = "<group>"; };
+		B7D5B83326B6E35A004F6DE0 /* aeee.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aeee.mp3; sourceTree = "<group>"; };
+		B7D5B83426B6E35A004F6DE0 /* pipoca.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pipoca.mp3; sourceTree = "<group>"; };
+		B7D5B83526B6E35A004F6DE0 /* conozco.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = conozco.mp3; sourceTree = "<group>"; };
+		B7D5B83626B6E35A004F6DE0 /* triste-nao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "triste-nao.mp3"; sourceTree = "<group>"; };
+		B7D5B83726B6E35A004F6DE0 /* vigarice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vigarice.mp3; sourceTree = "<group>"; };
+		B7D5B83826B6E35A004F6DE0 /* vamos-nos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "vamos-nos.mp3"; sourceTree = "<group>"; };
+		B7D5B83926B6E35A004F6DE0 /* cada-coisa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cada-coisa.mp3"; sourceTree = "<group>"; };
 		B7F562AE26B18F5300483147 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		B7F562B026B18FBF00483147 /* SelectItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectItemView.swift; sourceTree = "<group>"; };
 		B7F562B226B1948800483147 /* SelectItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectItemView.xib; sourceTree = "<group>"; };
@@ -89,6 +111,8 @@
 				B78A765626B09CBE00B46082 /* AppDelegate.swift */,
 				B78A765826B09CBE00B46082 /* SceneDelegate.swift */,
 				B78A765A26B09CBE00B46082 /* ViewController.swift */,
+				B7D5B82326B6DC8D004F6DE0 /* SFXPlayer.swift */,
+				B7D5B82726B6DD97004F6DE0 /* Sounds */,
 				B78A765F26B09CBF00B46082 /* Assets.xcassets */,
 				B78A766126B09CBF00B46082 /* LaunchScreen.storyboard */,
 				B78A766426B09CBF00B46082 /* Info.plist */,
@@ -135,6 +159,7 @@
 		B7C30E1226B2FF7800A7615D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B7D5B82526B6DCE4004F6DE0 /* musicModel.swift */,
 				B7C30E1326B2FF9200A7615D /* questionsModel.swift */,
 				B7C30E1A26B346AB00A7615D /* resultModel.swift */,
 			);
@@ -148,6 +173,22 @@
 				B7C30E1726B33A5100A7615D /* ResultViewController.xib */,
 			);
 			path = ResultViewController;
+			sourceTree = "<group>";
+		};
+		B7D5B82726B6DD97004F6DE0 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B7D5B83326B6E35A004F6DE0 /* aeee.mp3 */,
+				B7D5B83926B6E35A004F6DE0 /* cada-coisa.mp3 */,
+				B7D5B83526B6E35A004F6DE0 /* conozco.mp3 */,
+				B7D5B83126B6E35A004F6DE0 /* inferno.mp3 */,
+				B7D5B83426B6E35A004F6DE0 /* pipoca.mp3 */,
+				B7D5B83226B6E35A004F6DE0 /* policia.mp3 */,
+				B7D5B83626B6E35A004F6DE0 /* triste-nao.mp3 */,
+				B7D5B83826B6E35A004F6DE0 /* vamos-nos.mp3 */,
+				B7D5B83726B6E35A004F6DE0 /* vigarice.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		B7F5629B26B17A4E00483147 /* SelectItem */ = {
@@ -218,9 +259,18 @@
 			files = (
 				B78A766326B09CBF00B46082 /* LaunchScreen.storyboard in Resources */,
 				B7C30E1926B33A5100A7615D /* ResultViewController.xib in Resources */,
+				B7D5B84226B6E35A004F6DE0 /* cada-coisa.mp3 in Resources */,
+				B7D5B84026B6E35A004F6DE0 /* vigarice.mp3 in Resources */,
+				B7D5B83C26B6E35A004F6DE0 /* aeee.mp3 in Resources */,
+				B7D5B84126B6E35A004F6DE0 /* vamos-nos.mp3 in Resources */,
+				B7D5B83B26B6E35A004F6DE0 /* policia.mp3 in Resources */,
+				B7D5B83E26B6E35A004F6DE0 /* conozco.mp3 in Resources */,
+				B7D5B83D26B6E35A004F6DE0 /* pipoca.mp3 in Resources */,
+				B7D5B83A26B6E35A004F6DE0 /* inferno.mp3 in Resources */,
 				B78A766026B09CBF00B46082 /* Assets.xcassets in Resources */,
 				B7F562B326B1948800483147 /* SelectItemView.xib in Resources */,
 				B78A768326B0C49900B46082 /* QuestionViewController.xib in Resources */,
+				B7D5B83F26B6E35A004F6DE0 /* triste-nao.mp3 in Resources */,
 				B78A767926B0A61300B46082 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,8 +287,10 @@
 				B7F562AF26B18F5300483147 /* CustomUIView.swift in Sources */,
 				B78A767E26B0A9C700B46082 /* YellowRoundedButton.swift in Sources */,
 				B78A768226B0C49900B46082 /* QuestionViewController.swift in Sources */,
+				B7D5B82626B6DCE4004F6DE0 /* musicModel.swift in Sources */,
 				B78A765B26B09CBE00B46082 /* ViewController.swift in Sources */,
 				B7C30E1426B2FF9200A7615D /* questionsModel.swift in Sources */,
+				B7D5B82426B6DC8D004F6DE0 /* SFXPlayer.swift in Sources */,
 				B78A765726B09CBE00B46082 /* AppDelegate.swift in Sources */,
 				B78A767226B0A3B200B46082 /* UIFontExtension.swift in Sources */,
 				B7F562B126B18FBF00483147 /* SelectItemView.swift in Sources */,

@@ -17,6 +17,7 @@ struct Result {
     var imageName: String
     var description: String
     var background: [Background]? = nil
+    var music: Music { Music(name: imageName, type: "mp3") }
 
     func getGradientLayer(frame: CGRect) -> CAGradientLayer? {
         guard let bg = background else { return nil }

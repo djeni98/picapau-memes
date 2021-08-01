@@ -16,6 +16,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var imageBackgroundView: UIImageView!
 
     var resultPercent: Int? = nil
+    var music: Music? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,11 @@ class ResultViewController: UIViewController {
             self.hideImageAndLabels(false)
             self.hideAndDisableYellowButton(false)
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        SFXPlayer.shared.playMusic(music: music)
     }
 
     func hideImageAndLabels(_ hide: Bool) {
@@ -56,6 +62,7 @@ class ResultViewController: UIViewController {
         let resultArrayIndex = Int((decimalPercent * Double(resultsArrayData.count - 1)).rounded())
 
         let result = resultsArrayData[resultArrayIndex]
+        music = result.music
 
         imageView?.image = UIImage(named: result.imageName)
         descriptonLabel?.text = result.description

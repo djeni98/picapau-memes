@@ -12,6 +12,7 @@ struct Question {
     var options: [String]
     var correctIndex: Int = 0
     var correctAnswer: String { options[correctIndex] }
+    var music: Music { Music(name: imageName, type: "mp3") }
 
     func getOptionsLimitedByNumber(_ n: Int) -> [String] {
         if options.count > n {
